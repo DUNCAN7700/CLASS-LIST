@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        table{
+            width: 50%;
+        }
+        td{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table border="2px">
+        <tr>
+            <th>Name</th>
+            <th>Registration</th>
+        </tr>
+        {% for student in students %}
+            <tr>
+                <td>{{student.name}}</td>
+                <td>{{student.registration_number}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
